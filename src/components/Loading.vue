@@ -2,7 +2,7 @@
   <transition name="fade">
     <div class="loading-wrap" id="g-loading">
       <div class="loading-container">
-        <img src="@/assets/logo-loding.gif" width="200px" />
+<!--        <img src="@/assets/logo-loding.gif" width="200px" />-->
         <p class="text"></p>
       </div>
     </div>

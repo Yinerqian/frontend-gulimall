@@ -100,20 +100,21 @@ export default {
         type: "warning",
       }).then(() => {
         findByGroupId(groupId).then(res => {
-
-          if (res.content) {
-            this.$message({
-              type: "warning",
-              duration: 1500,
-              message: "该分组下还有权限，无法删除"
-            })
-          } else {
-            deleteByPermissionGroupId(groupId).then((res) => {
-              if (res.successFlag) {
-                this._loadData();
-              }
-            });
-          }
+          findByGroupId(groupId).then(res => {
+            if (res.content && res.content.length > 0) {
+              this.$notify({
+                title: '警告',
+                message: '该分组下还有权限，无法删除',
+                type: 'warning'
+              });
+            } else {
+              deleteByPermissionGroupId(groupId).then((res) => {
+                if (res.successFlag) {
+                  this._loadData();
+                }
+              });
+            }
+          })
         })
       });
     },

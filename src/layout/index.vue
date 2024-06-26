@@ -12,7 +12,7 @@
       <right-panel v-if="showSettings">
         <settings />
       </right-panel>
-      <Description />
+<!--      <Description />-->
     </div>
   </div>
 </template>

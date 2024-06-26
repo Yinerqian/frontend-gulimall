@@ -12,7 +12,7 @@ var timer;
 // 创建axios实例
 const Axios = axios.create({
   // axios中请求配置有baseURL选项，表示请求URL公共部分
-  baseURL: process.env.VUE_APP_ENV == 'development' ? process.env.VUE_APP_BASE_API : `http://${window.location.hostname}:7000`,
+  baseURL: process.env.VUE_APP_ENV == 'development' ? process.env.VUE_APP_BASE_API : `http://${window.location.hostname}:6000`,
   // 超时
   timeout: 10000,
   withCredentials: true, // 请求携带Cookie

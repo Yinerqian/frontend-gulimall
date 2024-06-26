@@ -63,7 +63,7 @@ export default {
   },
   watch: {
     '$route.path'(val) {
-      
+
     }
   },
   methods: {
@@ -78,7 +78,7 @@ export default {
           }
         });
         this.menuList = moduleList.sort(
-          function (a, b) { return b.sort - a.sort; }
+          function (a, b) { return a.sort - b.sort; }
         )
       }
       if (this.$route.name == "blank-index") {

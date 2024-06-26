@@ -1,0 +1,135 @@
+{
+  "id": "2350457",
+  "name": "连铸二冷动态配水系统",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "静态图标下载",
+  "glyphs": [
+    {
+      "icon_id": "6179176",
+      "name": "缺陷",
+      "font_class": "quexian",
+      "unicode": "e647",
+      "unicode_decimal": 58951
+    },
+    {
+      "icon_id": "18170243",
+      "name": "代码,分支,分流,分叉",
+      "font_class": "code-branch",
+      "unicode": "e993",
+      "unicode_decimal": 59795
+    },
+    {
+      "icon_id": "18471380",
+      "name": "导出",
+      "font_class": "daochu",
+      "unicode": "e6a6",
+      "unicode_decimal": 59046
+    },
+    {
+      "icon_id": "554516",
+      "name": "温度计",
+      "font_class": "iconset0480",
+      "unicode": "e767",
+      "unicode_decimal": 59239
+    },
+    {
+      "icon_id": "5920510",
+      "name": "表格",
+      "font_class": "dashujukeshihuaico-",
+      "unicode": "e802",
+      "unicode_decimal": 59394
+    },
+    {
+      "icon_id": "587312",
+      "name": "编辑",
+      "font_class": "bianji",
+      "unicode": "e669",
+      "unicode_decimal": 58985
+    },
+    {
+      "icon_id": "20221631",
+      "name": "删除",
+      "font_class": "shanchu",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "18517116",
+      "name": "主题",
+      "font_class": "0-32",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "15233427",
+      "name": "锅炉监测",
+      "font_class": "guolujiance",
+      "unicode": "e627",
+      "unicode_decimal": 58919
+    },
+    {
+      "icon_id": "8224831",
+      "name": "录入-线性",
+      "font_class": "luru-xianxing",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    },
+    {
+      "icon_id": "52698",
+      "name": "跟踪定位",
+      "font_class": "genzongdingwei",
+      "unicode": "e619",
+      "unicode_decimal": 58905
+    },
+    {
+      "icon_id": "380568",
+      "name": "锅炉-01",
+      "font_class": "guolu01",
+      "unicode": "e636",
+      "unicode_decimal": 58934
+    },
+    {
+      "icon_id": "310697",
+      "name": "home",
+      "font_class": "home",
+      "unicode": "e64f",
+      "unicode_decimal": 58959
+    },
+    {
+      "icon_id": "1541994",
+      "name": "温度",
+      "font_class": "wendu",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
+      "icon_id": "2045586",
+      "name": "报表",
+      "font_class": "icon-p_mrpbaobiao",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "3851461",
+      "name": "曲线图",
+      "font_class": "icon",
+      "unicode": "e80f",
+      "unicode_decimal": 59407
+    },
+    {
+      "icon_id": "15644310",
+      "name": "报警",
+      "font_class": "baojing",
+      "unicode": "e6ba",
+      "unicode_decimal": 59066
+    },
+    {
+      "icon_id": "1817691",
+      "name": "参数",
+      "font_class": "canshu",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+/**
+  入口文件
+  通用的自定义样式定义
+**/
+@import './native_default.scss';
+@import './iconfont/iconfont.css';
+@import './element_ui.scss';
+@import './variables.scss';
+@import './transition.scss';
+@import './sidebar.scss';
+@import './table2form.scss';
+@import './vux-table.scss';
+@import './theme/index.css';
+
+@font-face {
+  font-family: "digifac";
+  src: url("./fonts/digifac.woff");
+}
+
+@font-face {
+  font-family: "shishang";
+  src: url("./fonts/时尚中黑简体.ttf");
+}
+
+@font-face {
+  font-family: "youshe";
+  src: url("./fonts/优设标题黑.ttf");
+}

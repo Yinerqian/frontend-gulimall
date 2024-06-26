@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="icon" href="<%= BASE_URL %>logo.png">
+  <title>
+    <%= webpackConfig.name %>
+  </title>
+  <!--[if lt IE 11]><script>window.location.href='/html/ie.html';</script><![endif]-->
+  <style>
+    html,
+    body,
+    #app {
+      height: 100%;
+      width: 100%;
+      margin: 0px;
+      padding: 0px;
+      /* display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center; */
+    }
+
+    .loader {
+      --size: 42px;
+      --duration: 800ms;
+      width: 96px;
+      height: 64px;
+      margin: 50px auto;
+      transform-style: preserve-3d;
+      transform-origin: 50% 50%;
+      transform: rotateX(60deg) rotateZ(45deg) rotateY(0deg) translateZ(0px);
+      position: relative;
+    }
+
+    .loader .box {
+      width: 42px;
+      height: 42px;
+      transform-style: preserve-3d;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .loader .box:nth-child(1) {
+      transform: translate(100%, 0);
+      animation: box1 800ms linear infinite;
+    }
+
+    .loader .box:nth-child(2) {
+      transform: translate(0, 100%);
+      animation: box2 800ms linear infinite;
+    }
+
+    .loader .box:nth-child(3) {
+      transform: translate(100%, 100%);
+      animation: box3 800ms linear infinite;
+    }
+
+    .loader .box:nth-child(4) {
+      transform: translate(200%, 0);
+      animation: box4 800ms linear infinite;
+    }
+
+    .loader .box>div {
+      --translateZ: calc(var(--size) / 2);
+      --rotateY: 0deg;
+      --rotateX: 0deg;
+      background: #5c8df6;
+      width: 100%;
+      height: 100%;
+      transform: rotateY(var(--rotateY)) rotateX(var(--rotateX)) translateZ(var(--translateZ));
+      position: absolute;
+      top: auto;
+      right: auto;
+      bottom: auto;
+      left: auto;
+    }
+
+    .loader .box>div:nth-child(1) {
+      top: 0;
+      left: 0;
+    }
+
+    .loader .box>div:nth-child(2) {
+      background: #145af2;
+      right: 0;
+      --rotateY: 90deg;
+    }
+
+    .loader .box>div:nth-child(3) {
+      background: #447cf5;
+      --rotateX: -90deg;
+    }
+
+    .loader .box>div:nth-child(4) {
+      background: #dbe3f4;
+      top: 0;
+      left: 0;
+      --translateZ: calc(var(--size) * 3 * -1);
+    }
+
+    @keyframes box1 {
+
+      0%,
+      50% {
+        transform: translate(100%, 0);
+      }
+
+      100% {
+        transform: translate(200%, 0);
+      }
+    }
+
+    @keyframes box2 {
+      0% {
+        transform: translate(0, 100%);
+      }
+
+      50% {
+        transform: translate(0, 0);
+      }
+
+      100% {
+        transform: translate(100%, 0);
+      }
+    }
+
+    @keyframes box3 {
+
+      0%,
+      50% {
+        transform: translate(100%, 100%);
+      }
+
+      100% {
+        transform: translate(0, 100%);
+      }
+    }
+
+    @keyframes box4 {
+      0% {
+        transform: translate(200%, 0);
+      }
+
+      50% {
+        transform: translate(200%, 100%);
+      }
+
+      100% {
+        transform: translate(100%, 100%);
+      }
+    }
+
+    .animate-text {
+      align-content: flex-start;
+
+    }
+
+    .animate-text:after {
+      animation: spin 1s infinite;
+      font-size: 18px;
+      color: #666;
+      letter-spacing: 1px;
+      content: "模块加载中,请稍等";
+      position: fixed;
+      top: calc(45% + 150px);
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    @keyframes spin {
+      0% {
+        content: "模块加载中,请稍等";
+      }
+
+      33% {
+        content: "模块加载中,请稍等.";
+      }
+
+      66% {
+        content: "模块加载中,请稍等..";
+      }
+
+      100% {
+        content: "模块加载中,请稍等...";
+      }
+    }
+
+    .demo {
+      min-height: 230px;
+      width: 500px;
+      margin: 0 auto;
+      position: fixed;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .box-text {
+      color: #fff;
+      font-size: 20px;
+      text-align: center;
+      line-height: 2;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <div class="demo">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="loader">
+              <div class="box">
+                <div class="box-text">策</div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+              <div class="box">
+                <div class="box-text">芯</div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+              <div class="box">
+                <div class="box-text">之</div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+              <div class="box">
+                <div class="box-text">立</div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="animate-text"></div>
+  </div>
+</body>
+
+</html>

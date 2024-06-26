@@ -1,0 +1,117 @@
+.cii-table-top-border {
+  border-top: 1px solid #ebeef5;
+}
+.cii-table-left-border {
+  border-left: 1px solid #ebeef5;
+}
+
+.cii-table-right-border {
+  border-right: 1px solid #ebeef5;
+}
+
+.cii-table-bottom-border {
+  border-bottom: 1px solid #ebeef5;
+}
+
+.flex-horizontal-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-2 {
+  flex: 2;
+}
+
+.flex-3 {
+  flex: 3;
+}
+
+// 修改vxeTable默认样式
+.vxe-table--render-default.vxe-editable .vxe-body--column {
+  height: 32px !important;
+  //padding-top: 3px !important;
+  //padding-bottom: 3px !important;
+}
+
+.vxe-table--render-default .vxe-header--column:not(.col--ellipsis) {
+  padding: 0px !important;
+}
+
+.vxe-header--row .vxe-cell {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  height: 100%;
+  background: #FFFFFF;
+  padding: 10px 15px;
+  position: relative;
+  // padding: 5px;
+  .table-style {
+    width: 100%;
+    height: calc(100% - 100px);
+  }
+  .table-style-scroll {
+    overflow: auto;
+    width: 100%;
+    height: calc(100% - 65px);
+  }
+}
+
+.vxe-toolbar {
+  margin-bottom: 10px;
+  .el-input {
+    //width: 200px;
+  }
+}
+
+.vxe-input--inner {
+  text-align: center;
+}
+
+.search-bar2 {
+  display: flex;
+  align-items: center;
+  .el-form-item {
+    margin-bottom: 0;
+  }
+  .search-bar-add {
+    float: right;
+    margin-right: 0 !important;
+  }
+  .actions-wrap {
+    margin-left: 50px !important;
+  }
+}
+
+// 分页样式
+.vxe-pager--wrapper {
+  button[class^="vxe-pager"] {
+    height: 1.95em;
+  }
+}
+.vxe-pager--btn-wrapper {
+
+  button.vxe-pager--num-btn {
+    height: 1.75em;
+    line-height: 1.6em;
+  }
+}
+.vxe-pager--num-btn.is--active {
+  background-color: #337ab7 !important;
+  border-color: #2e6da4;
+  font-size: 0.9rem !important;
+}
+
+$vxe-input-height-default: 26px !default;
+$vxe-input-height-medium: 26px !default;
+$vxe-input-height-small: 26px !default;
+$vxe-input-height-mini: 26px !default;
+@import 'vxe-table/styles/index.scss';

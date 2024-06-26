@@ -1,0 +1,116 @@
+/*
+    关于html默认样式统一修改
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  // user-select: none;
+  letter-spacing: 1px;
+  //scroll-behavior: smooth; 导致el-table横滚时表头延迟滚动
+}
+
+* {
+  font-family: 'Mirages Custom', 'Merriweather', 'Open Sans', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft Yahei', 'WenQuanYi Micro Hei', 'Segoe UI Emoji', 'Segoe UI Symbol', Helvetica, Arial,
+    sans-serif;
+    scroll-behavior: smooth;
+}
+
+body,
+html {
+  overflow: hidden;
+  margin: 0;
+  height: 100%;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  // margin-bottom: 0 !important;
+}
+ol,
+ul,
+dl {
+  margin-bottom: 0;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  //图片
+  vertical-align: top;
+  border: none;
+}
+
+input,
+textarea {
+  //输入框
+  outline: none;
+  transition: 0.2s;
+  font-size: 14px;
+  color: #666;
+  &::-webkit-input-placeholder {
+    opacity: 0.5;
+    font-size: 13px;
+  }
+}
+
+[disabled='disabled'] {
+  //禁止状态
+  cursor: not-allowed;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+/*修改滚动条样式*/
+// *::-webkit-scrollbar {
+//   width: 10px;
+//   height: 8px;
+//   /**/
+// }
+// *::-webkit-scrollbar-track {
+//   background: transparent;
+//   border-radius: 0px;
+// }
+// *::-webkit-scrollbar-thumb {
+//   background: #2a5986;
+//   border-radius: 0px;
+// }
+// *::-webkit-scrollbar-thumb:hover {
+//   background: #3d83c8;
+//   cursor: pointer;
+// }
+// *::-webkit-scrollbar-thumb:active {
+//   background: #1f4161;
+// }
+// *::-webkit-scrollbar-corner {
+//   background: #179a16;
+// }
+
+table {
+  //表格
+  border: 0;
+  margin: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img {
+  user-select: none;
+}
+
+// [readonly='readonly'] {
+//   cursor: not-allowed !important;
+// }
+// .el-select {
+//   [readonly='readonly'] {
+//     cursor: auto !important;
+//   }
+// }

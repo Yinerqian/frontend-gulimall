@@ -13,6 +13,7 @@
         </el-form>
       </template>
       <template #tools>
+        <el-button type="primary" @click="clickTest()">测试</el-button>
         <el-button type="primary" @click="_onWillAdd">新增参数</el-button>
       </template>
     </vxe-toolbar>
@@ -50,6 +51,7 @@
 <script>
 import {deleteByConfigId, queryByPage} from "@/api/modules/sys-param";
 import EditParamDialog from "@/views/sys-manager/param-manager/EditParamDialog";
+import {listCategoryTree} from "@/api/modules/gulimall-product";
 
 export default {
   extends: Table2form.default,
@@ -66,6 +68,11 @@ export default {
     this.loadData();
   },
   methods: {
+    clickTest() {
+      listCategoryTree().then(res => {
+        console.log("拿到的分类树=======", res)
+      })
+    },
     onSearch() {
       this._loadData().then((res) => {
       });

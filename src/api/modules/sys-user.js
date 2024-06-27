@@ -3,7 +3,7 @@ import { Request, Constant } from '@/utils'
 export function queryByPage(pageNum, pageSize, params) {
     let newParams = Object.assign({}, { pageNum, pageSize }, params)
     return Request({
-        url: `${Constant.PREFIX}/user/queryByPage`,
+        url: `${Constant.SYSTEM_PREFIX}/user/queryByPage`,
         method: 'get',
         params: newParams
     })
@@ -12,7 +12,7 @@ export function queryByPage(pageNum, pageSize, params) {
 export function findByUserId(userId, params) {
     let newParams = Object.assign({}, { userId }, params);
     return Request({
-        url: `${Constant.PREFIX}/user/findByUserId`,
+        url: `${Constant.SYSTEM_PREFIX}/user/findByUserId`,
         method: 'get',
         params: newParams
     })
@@ -20,7 +20,7 @@ export function findByUserId(userId, params) {
 
 export function saveUserInfo(data) {
     return Request({
-        url: `${Constant.PREFIX}/user/saveUserInfo`,
+        url: `${Constant.SYSTEM_PREFIX}/user/saveUserInfo`,
         method: 'post',
         data: data
     })
@@ -28,7 +28,7 @@ export function saveUserInfo(data) {
 
 export function updateByUserId(data) {
     return Request({
-        url: `${Constant.PREFIX}/user/updateByUserId`,
+        url: `${Constant.SYSTEM_PREFIX}/user/updateByUserId`,
         method: 'put',
         data: data
     }, {
@@ -39,7 +39,7 @@ export function updateByUserId(data) {
 
 export function updatePassword(data) {
     return Request({
-        url: `${Constant.PREFIX}/user/updatePassword`,
+        url: `${Constant.SYSTEM_PREFIX}/user/updatePassword`,
         method: 'put',
         data: data
     })
@@ -48,7 +48,7 @@ export function updatePassword(data) {
 export function deleteByUserId(userId, params) {
     let newParams = Object.assign({}, { userId }, params);
     return Request({
-        url: `${Constant.PREFIX}/user/deleteByUserId`,
+        url: `${Constant.SYSTEM_PREFIX}/user/deleteByUserId`,
         method: 'delete',
         params: newParams
     })

@@ -51,7 +51,7 @@
 <script>
 import {deleteByConfigId, queryByPage} from "@/api/modules/sys-param";
 import EditParamDialog from "@/views/sys-manager/param-manager/EditParamDialog";
-import {listCategoryTree} from "@/api/modules/gulimall-product";
+import {listCategoryTree} from "@/api/modules/gulimall-product/gulimall-product";
 
 export default {
   extends: Table2form.default,

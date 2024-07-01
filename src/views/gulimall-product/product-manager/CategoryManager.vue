@@ -1,6 +1,6 @@
 <template>
   <el-container class="page-container">
-    <el-aside width="300px" style="height: 100%">
+    <el-aside width="100%" style="height: 100%">
         <el-input style="margin-top: 20px"
                   placeholder="输入关键字进行过滤"
                   v-model="filterText">
@@ -11,24 +11,24 @@
                  :filter-node-method="filterNode"
                  @node-click="handleNodeClick"/>
     </el-aside>
-    <el-main class="page-main">
-      <el-header class="page-header">
-        <el-form class="search-bar" inline @submit.native.prevent @keyup.enter.native="_onSearchTable(_loadData)">
-          <el-form-item>
-            <el-input v-model.trim="_searchForm.keyword" maxlength="100" placeholder="账号 / 用户昵称"></el-input>
-          </el-form-item>
-          <el-form-item>
-            <div class="actions-wrap">
-              <el-button icon="cii-icon-search" type="primary" @click="onSearch()">查询</el-button>
-              <el-button icon="cii-icon-reset" @click="onReset(loadData)">重置</el-button>
-            </div>
-          </el-form-item>
-          <el-form-item class="search-bar-add">
-            <el-button icon="cii-icon-add" type="primary" @click="_onWillAdd">新增用户</el-button>
-          </el-form-item>
-        </el-form>
-      </el-header>
-    </el-main>
+<!--    <el-main class="page-main">-->
+<!--      <el-header class="page-header">-->
+<!--        <el-form class="search-bar" inline @submit.native.prevent @keyup.enter.native="_onSearchTable(_loadData)">-->
+<!--          <el-form-item>-->
+<!--            <el-input v-model.trim="_searchForm.keyword" maxlength="100" placeholder="账号 / 用户昵称"></el-input>-->
+<!--          </el-form-item>-->
+<!--          <el-form-item>-->
+<!--            <div class="actions-wrap">-->
+<!--              <el-button icon="cii-icon-search" type="primary" @click="onSearch()">查询</el-button>-->
+<!--              <el-button icon="cii-icon-reset" @click="onReset(loadData)">重置</el-button>-->
+<!--            </div>-->
+<!--          </el-form-item>-->
+<!--          <el-form-item class="search-bar-add">-->
+<!--            <el-button icon="cii-icon-add" type="primary" @click="_onWillAdd">新增用户</el-button>-->
+<!--          </el-form-item>-->
+<!--        </el-form>-->
+<!--      </el-header>-->
+<!--    </el-main>-->
   </el-container>
 </template>
 

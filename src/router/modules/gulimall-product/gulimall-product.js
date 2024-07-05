@@ -12,5 +12,11 @@ export default {
 			component: resolve => { return require(["@/views/gulimall-product/product-manager/CategoryManager"], resolve) },
 			meta: { title: '分类管理', icon: 'category-manager' }
 		},
+		{
+			path: 'brand-manager',
+			name: 'brand-manager',
+			component: resolve => { return require(["@/views/gulimall-product/brand-manager/BrandManager"], resolve) },
+			meta: { title: '品牌管理', icon: 'brand-manager' }
+		},
 	]
 }

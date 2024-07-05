@@ -1,6 +1,15 @@
 /**
   element-ui 组件样式覆盖
 **/
+div, span, p, a, button, label, input, h1, h3, header, li {
+  font-family: "PuHuiTi";
+}
+
+.el-form .el-input__inner, .el-form-item__label, .el-pagination span, .nickname, .el-select .el-input__inner, .el-tree span {
+  color: #25282D !important;
+  font-weight: 500;
+}
+
 // ----------------按钮----------------
 button.el-button--primary,button.el-button--info,button.el-button--default{
   font-size: 0.85rem !important;
@@ -49,7 +58,7 @@ button.el-button--primary {
   }
   &:focus {
     background-color: #337ab7;
-    border-color: #2e6da4;    
+    border-color: #2e6da4;
     box-shadow: 0 0 0 0.2rem rgb(49 132 253 / 50%);
   }
 }
@@ -87,6 +96,21 @@ footer.el-footer {
 .el-input__inner {
   &::placeholder {
     color: #555;
+  }
+}
+
+.el-table {
+  height: calc(100% - 0px) !important;
+
+  .el-table__header-wrapper {
+    .el-table__header {
+      tr > th.el-table__cell {
+
+        > .cell {
+
+        }
+      }
+    }
   }
 }
 

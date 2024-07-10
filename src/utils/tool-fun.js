@@ -6,7 +6,7 @@
  * @param {Object} source
  * @returns {Object}
  */
-import Storage from "@cii/cii-base-utils/dist/cii-base-utils.esm"
+import Storage from "@/utils/storage"
 import Constant from "./constant.js"
 
 function deepClone(source) {

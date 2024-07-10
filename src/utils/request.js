@@ -4,7 +4,6 @@ import { Storage } from '@/utils/index.js'
 import router from '@/router';
 import ToolFun from "./tool-fun"
 import Constant from "./constant"
-import Validate  from "@cii/cii-base-utils/dist/cii-base-utils.esm"
 
 var msg_lock = false;  // 上锁,防止多次message连续报错
 var timer;
@@ -117,7 +116,7 @@ function Request(options = {}, config = {}) {
     Axios(options).then(res => {
       resolve(res)
       if (feedback) {  // 如果在定义接口的方法中加了参数feedback:true 表示接口请求成功会返回提示信息, 报错不用加,上面已经有了
-        Notification.success({message: Validate.isString(feedback) ? feedback : "保存成功", title: "成功"})
+        Notification.success({message: XEUtils.isString(feedback) ? feedback : "保存成功", title: "成功"})
       }
     }).catch(err => {
       reject(err)

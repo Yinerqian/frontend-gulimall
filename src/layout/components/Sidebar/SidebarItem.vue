@@ -26,8 +26,8 @@
 
 <script>
 import path from 'path'
-import { Validate } from '@/utils/index.js'
 import FixiOSBug from './FixiOSBug'
+import XEUtils from "xe-utils";
 
 export default {
   name: 'SidebarItem',
@@ -80,13 +80,16 @@ export default {
       return false
     },
     resolvePath(routePath) {
-      if (Validate.isExternal(routePath)) {
+      if (XEUtils.isExternal(routePath)) {
         return routePath
       }
-      if (Validate.isExternal(this.basePath)) {
+      if (XEUtils.isExternal(this.basePath)) {
         return this.basePath
       }
-      return path.resolve(this.basePath, routePath)
+      let temppath = path.resolve(this.basePath, routePath);
+      console.log("routePath====", routePath)
+      console.log("temppath====", temppath)
+      return temppath;
     }
   }
 }

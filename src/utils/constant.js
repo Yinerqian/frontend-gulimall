@@ -3,6 +3,7 @@ const FILE_BASE_API= `${process.env.VUE_APP_BASE_API}/cii-file/file`;
 export default {
     SYSTEM_PREFIX: "/gulimall-system",  // gulimall-system api接口前缀
     PRODUCT_PREFIX: "/gulimall-product",  // gulimall-product api接口前缀
+    FILE_PREFIX: "/gulimall-file",  // gulimall-file api接口前缀
     ODC_PREFIX: "/odc/lgsm",
     LOADING_BLACK_LIST: ["/oauth", '/scheduleOverview', '/zrl'],  // 全屏loading根据接口状态显示, 这是黑名单过滤某些接口
     HEADER_ADD_PARAMS_WHITE_LIST: ['/api/lgsm/oauth/login'],  // 接口header头部信息添加一些参数,这是白名单过滤某些接口

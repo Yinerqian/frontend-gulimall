@@ -60,8 +60,9 @@
 </template>
 
 <script>
-import {pageBrand} from "@/api/modules/gulimall-product/gulimall-brand";
+import {pageBrand, deleteBrandById} from "@/api/modules/gulimall-product/gulimall-brand";
 import EditBrandDialog from "_v/gulimall-product/brand-manager/EditBrandDialog";
+import {ossSign} from "@/api/modules/gulimall-file/gulimall-file";
 
 export default {
   extends: Table2form.default,
@@ -71,12 +72,18 @@ export default {
   data() {
     return {
       pageListApi: pageBrand,
+      delRowApi: deleteBrandById
     };
   },
   created() {
     this.loadData();
   },
   methods: {
+    test() {
+      ossSign().then(res => {
+        console.log("res====", res)
+      })
+    },
     onSearch() {
       this._loadData().then((res) => {
       });
@@ -85,12 +92,12 @@ export default {
     loadData() {
       this._loadData().then((res) => {
         this._tableList = res.content.list;
-        console.log("res=========", res)
       });
       //   }
     },
     onReset() {
       this._pagination.pageNum = 1; // 分页变回1
+      this._searchForm = {}
       this._loadData().then((res) => {
         // 如果还有其他操作,可以继续.then, res就是pageListApi返回的东西
       });
@@ -100,59 +107,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.tenant-list {
-  .title {
-    font-size: 14px;
-    color: #333;
-    line-height: 32px;
-    padding: 3px 10px;
-    // margin-bottom: 8px;
-    cursor: pointer;
-    border-bottom: 1px solid #f2f2f2;
-    border-left: 2px solid transparent;
-    &:hover {
-      background: #f8fafb;
-    }
-  }
-  .active-title {
-    color: #1a94f7;
-    font-weight: 600;
-    border-left: 2px solid #1a94f7;
-    background: #f8fafb;
-    font-size: 16px;
-  }
-}
-.el-aside {
-  margin-bottom: 0px;
-}
-::v-deep .custom-tree-node {
-  width: 100%;
-  &:hover {
-    .action-wrap {
-      opacity: 1;
-    }
-  }
-  .action-wrap {
-    opacity: 0.1;
-    margin-left: 100px;
-    .el-link {
-      line-height: 16px;
-    }
-  }
-}
 
-::v-deep .el-tree-node__content {
-  height: 34px;
-  border-left: 2px solid transparent;
-}
-
-::v-deep .el-tree-node:focus {
-  & > .el-tree-node__content {
-    border-left: 2px solid #1a94f7;
-  }
-  // .action-wrap {
-  //   opacity: 1;
-  // }
-}
 </style>
 

@@ -1,5 +1,5 @@
 import { Notification } from 'element-ui'
-import Validate from "@cii/cii-base-utils/dist/cii-base-utils.esm"
+import XEUtils from "xe-utils";
 
 let defaultConf = {
     type: "info",
@@ -7,7 +7,7 @@ let defaultConf = {
 }
 
 MyMessage.error = function (options) {
-    if (Validate.isString(options)) {
+    if (XEUtils.isString(options)) {
         Notification({
             type: "error",
             title: "错误",
@@ -22,7 +22,7 @@ MyMessage.error = function (options) {
 }
 
 MyMessage.success = function (options) {
-    if (Validate.isString(options)) {
+    if (XEUtils.isString(options)) {
         Notification({
             type: "success",
             title: "成功",
@@ -37,7 +37,7 @@ MyMessage.success = function (options) {
 }
 
 MyMessage.warning = function (options) {
-    if (Validate.isString(options)) {
+    if (XEUtils.isString(options)) {
         Notification({
             type: "warning",
             title: "警告",
@@ -52,7 +52,7 @@ MyMessage.warning = function (options) {
 }
 
 MyMessage.info = function (options) {
-    if (Validate.isString(options)) {
+    if (XEUtils.isString(options)) {
         Notification({
             type: "info",
             title: "提示",
@@ -67,7 +67,7 @@ MyMessage.info = function (options) {
 }
 
 function MyMessage(options) {
-    if (Validate.isString(options)) {
+    if (XEUtils.isString(options)) {
         Notification({
             type: "warning",
             title: "警告",

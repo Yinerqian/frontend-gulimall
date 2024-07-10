@@ -1,8 +1,8 @@
 import { Storage } from "@/utils/index.js"
 
 const state = {
-  visitedViews: Storage.session.get("visitedViews") || [],
-  cachedViews: Storage.session.get("cachedViews") || []
+  visitedViews: Storage.get("visitedViews") || [],
+  cachedViews: Storage.get("cachedViews") || []
 }
 
 const mutations = {
@@ -22,7 +22,7 @@ const mutations = {
         query: view.query,
       })
     )
-    Storage.session.set("visitedViews", state.visitedViews)
+    Storage.set("visitedViews", state.visitedViews)
   },
   ADD_CACHED_VIEW: (state, view) => {
     if (view.name == 'blank-index') {
@@ -31,7 +31,7 @@ const mutations = {
     if (state.cachedViews.includes(view.name)) return
     if (!view.meta.noCache) {
       state.cachedViews.push(view.name)
-      Storage.session.set("cachedViews", state.cachedViews)
+      Storage.set("cachedViews", state.cachedViews)
     }
   },
   DEL_VISITED_VIEW: (state, view) => {
@@ -44,19 +44,19 @@ const mutations = {
         break
       }
     }
-    Storage.session.set("visitedViews", state.visitedViews)
+    Storage.set("visitedViews", state.visitedViews)
   },
   DEL_CACHED_VIEW: (state, view) => {
     const index = state.cachedViews.indexOf(view.name)
     index > -1 && state.cachedViews.splice(index, 1)
-    Storage.session.set("cachedViews", state.cachedViews)
+    Storage.set("cachedViews", state.cachedViews)
   },
 
   DEL_OTHERS_VISITED_VIEWS: (state, view) => {
     state.visitedViews = state.visitedViews.filter(v => {
       return v.meta.affix || v.path === view.path
     })
-    Storage.session.set("visitedViews", state.visitedViews)
+    Storage.set("visitedViews", state.visitedViews)
   },
   DEL_OTHERS_CACHED_VIEWS: (state, view) => {
     const index = state.cachedViews.indexOf(view.name)
@@ -65,19 +65,19 @@ const mutations = {
     } else {
       state.cachedViews = []
     }
-    Storage.session.set("cachedViews", state.cachedViews)
+    Storage.set("cachedViews", state.cachedViews)
   },
 
   DEL_ALL_VISITED_VIEWS: state => {
     // keep affix tags
     const affixTags = state.visitedViews.filter(tag => tag.meta.affix)
     state.visitedViews = affixTags
-    Storage.session.set("visitedViews", state.visitedViews)
+    Storage.set("visitedViews", state.visitedViews)
 
   },
   DEL_ALL_CACHED_VIEWS: state => {
     state.cachedViews = []
-    Storage.session.set("cachedViews", state.cachedViews)
+    Storage.set("cachedViews", state.cachedViews)
   },
 
   UPDATE_VISITED_VIEW: (state, view) => {
@@ -95,7 +95,7 @@ const mutations = {
         break
       }
     }
-    Storage.session.set("visitedViews", state.visitedViews)
+    Storage.set("visitedViews", state.visitedViews)
 
   },
 
@@ -114,7 +114,7 @@ const mutations = {
       }
       return false
     })
-    Storage.session.set("visitedViews", state.visitedViews)
+    Storage.set("visitedViews", state.visitedViews)
   }
 }
 

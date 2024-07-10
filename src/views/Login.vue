@@ -45,6 +45,7 @@ import { KinesisContainer, KinesisElement } from 'vue-kinesis'
 import md5 from "js-md5"
 Vue.component('kinesis-container', KinesisContainer)
 Vue.component('kinesis-element', KinesisElement)
+import router from "@/router";
 
 export default {
   extends: Table2form.default,
@@ -88,9 +89,12 @@ export default {
                           })
                         }
                       })
+                      console.log("userMenuPermissions===", userMenuPermissions)
                       if (this.$util.ToolFun.checkListLen(userMenuPermissions)) {
                         Storage.set("userMenuPermissions", userMenuPermissions);
-                        this.$router.push({
+                        console.log("Storage.getAll()====", Storage.get("userMenuPermissions"))
+                        console.log("this.$router===", this.$router)
+                        router.push({
                           path: "/sys-manager/user-manager"
                         })
                       }
